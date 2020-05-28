@@ -5,6 +5,10 @@ var app = new Vue({
     list: ["りんご", "ばなな", "いちご"],
     count: 1,
     show: true,
+    scroll: 0,
+  },
+  mounted: function () {
+    this.scroll = 100;
   },
   methods: {
     handleClick: function (event) {
@@ -12,5 +16,3 @@ var app = new Vue({
     },
   },
 });
-
-console.log(app.message);
