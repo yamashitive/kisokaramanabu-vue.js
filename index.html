@@ -9,6 +9,20 @@
     <div id="app">
       <div id="chapter2">
         <h2>Chapter 2</h2>
+        <div>
+          <div v-if="ok">v-if条件による描画</div>
+          <div v-show="ok">v-show条件による描画</div>
+        </div>
+        <div>
+          <svg xmlns="https://www.w3.org/2000/svg" version="1.1">
+            <circle cx="100" cy="75" v-bind:r="radius" fill="lightpink" />
+          </svg>
+          <input type="range" min="0" max="100" v-model="radius" />
+        </div>
+        <div>
+          <p>{{ count }}回クリックしたよ</p>
+          <button v-on:click="increment">カウントを増やす</button>
+        </div>
         <div v-bind:text-content.prop="message">...</div>
         <div v-bind:scroll-top.prop="scroll">...</div>
       </div>

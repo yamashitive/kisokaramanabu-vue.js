@@ -3,9 +3,11 @@ var app = new Vue({
   data: {
     message: "Hello Vue.js!",
     list: ["りんご", "ばなな", "いちご"],
-    count: 1,
+    count: 0,
     show: true,
     scroll: 0,
+    radius: 50,
+    ok: false,
   },
   mounted: function () {
     this.scroll = 100;
@@ -13,6 +15,9 @@ var app = new Vue({
   methods: {
     handleClick: function (event) {
       alert(event.target);
+    },
+    increment: function () {
+      this.count++;
     },
   },
 });
